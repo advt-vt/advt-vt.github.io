@@ -1,2 +1,3 @@
 # advt-vt.github.io
-Documentation Repository for ADVT
+
+The website is hosted [here](https://advt-vt.github.io/)
