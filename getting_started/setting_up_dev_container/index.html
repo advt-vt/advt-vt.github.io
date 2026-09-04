@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Set up the development container.">
+        <meta name="description" content="Setting up the development container.">
       
       
       
@@ -451,17 +451,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-git-ssh-inside-the-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Setting up git SSH inside the container
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reopening-the-container" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -548,17 +537,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-git-ssh-inside-the-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Setting up git SSH inside the container
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reopening-the-container" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -602,42 +580,37 @@
 
 <h1 id="setting-up-the-development-container"><p style="text-align: center;"> Setting up the Development Container </p></h1>
 <h2 id="cloning-the-repository"><p style="text-align: center;"> Cloning the Repository </p></h2>
-<p>In the terminal (or WSL) run this command.</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/advt-vt/advt.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>advt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>code<span class="w"> </span>.
+<p>First create a new SSH key. Use the default path (~/.ssh/id_ed25519), you can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key).</p>
+<div class="admonition note">
+<p class="admonition-title">Windows Users</p>
+<p><strong>If you are using Windows you must do all of the following commands in WSL</strong></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Linux Users</p>
+<p>If you already have a ssh key added to your github account you can skip to the end of this step.</p>
+</div>
+<div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">"github"</span>
+cat<span class="w"> </span>~/.ssh/id_ed25519.pub
+</code></pre></div>
+<p>Go to this link <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> and click <strong>New SSH Key</strong>. Add the title <code>WSL Ubuntu 24.04</code> and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field.</p>
+<p>Then open your ssh config file by running this command.</p>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/.ssh/config
+</code></pre></div>
+<p>And then paste this block into the file.</p>
+<div class="highlight"><pre><span></span><code>Host<span class="w"> </span>github.com
+<span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/id_ed25519
+</code></pre></div>
+<p>Then clone the repository and open VS Code.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:advt-vt/advt.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>advt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>code<span class="w"> </span>.
 </code></pre></div>
 <h2 id="installing-the-dev-container"><p style="text-align: center;"> Installing the dev container </p></h2>
 <p>In VS Code open the Quick Open Dialog by pressing <code>Ctrl+P</code>/<code>⌘P</code>.</p>
 <p>Type <code>ext install dev containers</code> and install and enable the Microsoft Dev Containers extension.</p>
 <p>Build and enter the dev container by opening the Quick Open Dialog and typing <code>&gt;Dev Containers: Rebuild and Reopen in Container</code>.</p>
-<h2 id="setting-up-git-ssh-inside-the-container"><p style="text-align: center;"> Setting up git SSH inside the container </p></h2>
-<p>In the VS Code dev container terminal create a new SSH key. Use the default path (~/.ssh/id_ed25519), you can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key). </p>
-<div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">"github"</span>
-</code></pre></div>
-<p>Open your bashrc by running this command.</p>
-<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/.bashrc
-</code></pre></div>
-<p>And then paste this block at the end of the file.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#start ssh for this terminal and add all keys</span>
-<span class="k">for</span><span class="w"> </span>key<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.ssh/*<span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<span class="w">    </span><span class="nv">fname</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="nv">$key</span><span class="k">)</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">"</span><span class="nv">$key</span><span class="s2">"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>!<span class="w"> </span><span class="s2">"</span><span class="nv">$fname</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>.*<span class="se">\.</span>pub$<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>!<span class="w"> </span><span class="s2">"</span><span class="nv">$fname</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>^known_hosts.*<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>!<span class="w"> </span><span class="s2">"</span><span class="nv">$fname</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>^config$<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>!<span class="w"> </span><span class="s2">"</span><span class="nv">$fname</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>^authorized_keys.*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">        </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>keychain<span class="w"> </span>-q<span class="w"> </span>--eval<span class="w"> </span><span class="s2">"</span><span class="nv">$key</span><span class="s2">"</span><span class="w"> </span><span class="k">)</span>
-<span class="w">    </span><span class="k">fi</span>
-<span class="k">done</span>
-</code></pre></div>
-<p>Then run these commands to update.</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>keychain<span class="w"> </span>-y
-<span class="nb">source</span><span class="w"> </span>~/.bashrc
-cat<span class="w"> </span>~/.ssh/id_ed25519.pub
-</code></pre></div>
-<p>Go to this link <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> and click <strong>New SSH Key</strong>. Add the title <code>ADVT Dev Container</code> and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field. Then run this command to change the remote repository from HTTPS to SSH.</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:advt-vt/advt.git
-</code></pre></div>
 <h2 id="reopening-the-container"><p style="text-align: center;"> Reopening the Container </p></h2>
 <p>To stop the container open the Quick Open Dialog box and type <code>Remote: Close Remote Connection</code> and then close VS Code.</p>
 <p>To reopen the container first open WSL and run this command.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>advt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>code<span class="w"> </span>.
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>advt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>code<span class="w"> </span>.
 </code></pre></div>
 <p>Then reopen the container by opening the Quick Open Dialog box and typing <code>&gt;Dev Containers: Rebuild and Reopen in Container</code>.</p>
 <h2 id="known-limitations-of-dev-containers"><p style="text-align: center;"> <a href="https://code.visualstudio.com/docs/devcontainers/containers#_known-limitations">Known Limitations</a> of Dev Containers </p></h2>
