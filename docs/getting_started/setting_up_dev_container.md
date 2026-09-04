@@ -1,6 +1,6 @@
 ---
 title: Dev Container
-description: Set up the development container.
+description: Setting up the development container.
 ---
 
 # <p style="text-align: center;"> Setting up the Development Container </p>

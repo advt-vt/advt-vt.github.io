@@ -1,6 +1,6 @@
 ---
 title: Installing Software
-description: Install Required Software.
+description: Installing the required software.
 ---
 
 # <p style="text-align: center"> Installing Software </p>
