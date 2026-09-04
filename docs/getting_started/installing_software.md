@@ -39,12 +39,6 @@ Ensure the [WSL 2 back-end](https://aka.ms/vscode-remote/containers/docker-wsl2)
 
 Go to this link <https://code.visualstudio.com/Download> and download and install VS Code for Windows.
 
-### Installing [Git](https://git-scm.com/install/windows)
-
-(or should we just use github desktop?) (do we even need to? does it come in wsl?) (also potentially seperate windows and linux into seperate pages, so headers are better, make subheaders in the middle)
-
-Go to this link <https://git-scm.com/install/windows> and download and install the latest version.
-
 <br>
 
 ## <p style="text-align: center"> Linux </p>
