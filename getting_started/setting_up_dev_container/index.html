@@ -6,33 +6,33 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="ADVT Documentation Home Page">
+        <meta name="description" content="Set up the development container.">
       
       
       
-        <link rel="canonical" href="https://advt-vt.github.io/">
+        <link rel="canonical" href="https://advt-vt.github.io/getting_started/setting_up_dev_container/">
       
       
+        <link rel="prev" href="../installing_software/">
       
-        <link rel="next" href="getting_started/installing_software/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Home - ADVT Documentation</title>
+        <title>Dev Container - ADVT Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-the-advt-documentation" class="md-skip">
+        <a href="#setting-up-the-development-container" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="ADVT Documentation" class="md-header__button md-logo" aria-label="ADVT Documentation" data-md-component="logo">
+    <a href="../.." title="ADVT Documentation" class="md-header__button md-logo" aria-label="ADVT Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Dev Container
             
           </span>
         </div>
@@ -235,7 +235,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="ADVT Documentation" class="md-nav__button md-logo" aria-label="ADVT Documentation" data-md-component="logo">
+    <a href="../.." title="ADVT Documentation" class="md-nav__button md-logo" aria-label="ADVT Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -262,19 +262,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -290,7 +281,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -299,18 +289,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -331,7 +323,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -349,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting_started/installing_software/" class="md-nav__link">
+      <a href="../installing_software/" class="md-nav__link">
         
   
   
@@ -374,10 +366,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="getting_started/setting_up_dev_container/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Up the Development Container
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -393,6 +412,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cloning-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloning the Repository
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-dev-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing the dev container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-git-ssh-inside-the-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up git SSH inside the container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reopening-the-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reopening the Container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-limitations-of-dev-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known Limitations of Dev Containers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -425,6 +519,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cloning-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloning the Repository
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-dev-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing the dev container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-git-ssh-inside-the-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up git SSH inside the container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reopening-the-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reopening the Container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-limitations-of-dev-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known Limitations of Dev Containers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -443,7 +600,53 @@
   
 
 
-<h1 id="welcome-to-the-advt-documentation"><p style="text-align: center;"> Welcome to the ADVT Documentation!</p></h1>
+<h1 id="setting-up-the-development-container"><p style="text-align: center;"> Setting up the Development Container </p></h1>
+<h2 id="cloning-the-repository"><p style="text-align: center;"> Cloning the Repository </p></h2>
+<p>In the terminal (or WSL) run this command.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/advt-vt/advt.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>advt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>code<span class="w"> </span>.
+</code></pre></div>
+<h2 id="installing-the-dev-container"><p style="text-align: center;"> Installing the dev container </p></h2>
+<p>In VS Code open the Quick Open Dialog by pressing <code>Ctrl+P</code>/<code>⌘P</code>.</p>
+<p>Type <code>ext install dev containers</code> and install and enable the Microsoft Dev Containers extension.</p>
+<p>Build and enter the dev container by opening the Quick Open Dialog and typing <code>&gt;Dev Containers: Rebuild and Reopen in Container</code>.</p>
+<h2 id="setting-up-git-ssh-inside-the-container"><p style="text-align: center;"> Setting up git SSH inside the container </p></h2>
+<p>In the VS Code dev container terminal create a new SSH key. Use the default path (~/.ssh/id_ed25519), you can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key). </p>
+<div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">"github"</span>
+</code></pre></div>
+<p>Open your bashrc by running this command.</p>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/.bashrc
+</code></pre></div>
+<p>And then paste this block at the end of the file.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#start ssh for this terminal and add all keys</span>
+<span class="k">for</span><span class="w"> </span>key<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.ssh/*<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">fname</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="nv">$key</span><span class="k">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">"</span><span class="nv">$key</span><span class="s2">"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>!<span class="w"> </span><span class="s2">"</span><span class="nv">$fname</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>.*<span class="se">\.</span>pub$<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>!<span class="w"> </span><span class="s2">"</span><span class="nv">$fname</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>^known_hosts.*<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>!<span class="w"> </span><span class="s2">"</span><span class="nv">$fname</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>^config$<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>!<span class="w"> </span><span class="s2">"</span><span class="nv">$fname</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>^authorized_keys.*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>keychain<span class="w"> </span>-q<span class="w"> </span>--eval<span class="w"> </span><span class="s2">"</span><span class="nv">$key</span><span class="s2">"</span><span class="w"> </span><span class="k">)</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">done</span>
+</code></pre></div>
+<p>Then run these commands to update.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>keychain<span class="w"> </span>-y
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
+cat<span class="w"> </span>~/.ssh/id_ed25519.pub
+</code></pre></div>
+<p>Go to this link <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> and click <strong>New SSH Key</strong>. Add the title <code>ADVT Dev Container</code> and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field. Then run this command to change the remote repository from HTTPS to SSH.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:advt-vt/advt.git
+</code></pre></div>
+<h2 id="reopening-the-container"><p style="text-align: center;"> Reopening the Container </p></h2>
+<p>To stop the container open the Quick Open Dialog box and type <code>Remote: Close Remote Connection</code> and then close VS Code.</p>
+<p>To reopen the container first open WSL and run this command.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>advt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>code<span class="w"> </span>.
+</code></pre></div>
+<p>Then reopen the container by opening the Quick Open Dialog box and typing <code>&gt;Dev Containers: Rebuild and Reopen in Container</code>.</p>
+<h2 id="known-limitations-of-dev-containers"><p style="text-align: center;"> <a href="https://code.visualstudio.com/docs/devcontainers/containers#_known-limitations">Known Limitations</a> of Dev Containers </p></h2>
+<ul>
+<li>The unofficial Ubuntu Docker snap package for Linux is not supported.</li>
+<li>Docker Toolbox on Windows is not supported.</li>
+<li>Local proxy settings are not reused inside the container, which can prevent extensions from working unless the appropriate proxy information is configured (for example global <code>HTTP_PROXY</code> or <code>HTTPS_PROXY</code> environment variables with the appropriate proxy information).</li>
+<li>There is an incompatibility between OpenSSH versions on Windows when the ssh-agent runs with version &lt;= 8.8 and the SSH client (on any platform) runs version &gt;= 8.9. The workaround is to upgrade OpenSSH on Windows to 8.9 or later, either using winget or an installer from <a href="https://github.com/PowerShell/Win32-OpenSSH/releases">Win32-OpenSSH/releases</a>. (Note that <code>ssh-add -l</code> will work correctly, but <code>ssh &lt;ssh-server&gt;</code> will fail with <code>&lt;ssh-server&gt;: Permission denied (publickey)</code>. This also affects Git when using SSH to connect to the repository.)</li>
+</ul>
 
 
 
@@ -498,10 +701,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "content.code.select", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "search.suggest", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.select", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
