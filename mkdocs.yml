@@ -2,22 +2,22 @@ site_name: ADVT Documentation
 site_description: Documentation for Autonomous Drone at Virginia Tech.
 site_url: https://advt-vt.github.io/
 repo_url: https://github.com/advt-vt
-repo_name: ADVT Organization
+repo_name: Github Organization
 
 theme:
     name: material
     icon:
         repo: fontawesome/brands/github
-    palette: 
+    palette:
         - scheme: slate
           primary: black
           toggle:
             icon: material/brightness-4
             name: Switch to light mode
-            
+
         - scheme: default
           toggle:
-            icon: material/brightness-7 
+            icon: material/brightness-7
             name: Switch to dark mode
     features:
         - content.code.copy
@@ -45,3 +45,7 @@ markdown_extensions:
 
 nav:
     - Home: index.md
+
+    - Getting Started:
+      - Installing Software: getting_started/installing_software.md
+      - Setting Up the Development Container: getting_started/setting_up_dev_container.md
