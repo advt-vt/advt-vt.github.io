@@ -7,27 +7,20 @@ description: Setting up the development container.
 
 ## <p style="text-align: center;"> Cloning the Repository </p>
 
-In the terminal (or WSL) run this command.
+First create a new SSH key. Use the default path (~/.ssh/id_ed25519), you can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key).
 
-``` bash
-git clone https://github.com/advt-vt/advt.git && cd advt && code .
-```
+!!! Note "Windows Users"
+    **If you are using Windows you must do all of the following commands in WSL**
 
-## <p style="text-align: center;"> Installing the dev container </p>
-
-In VS Code open the Quick Open Dialog by pressing `Ctrl+P`/`⌘P`.
-
-Type `ext install dev containers` and install and enable the Microsoft Dev Containers extension.
-
-Build and enter the dev container by opening the Quick Open Dialog and typing `>Dev Containers: Rebuild and Reopen in Container`.
-
-## <p style="text-align: center;"> Setting up git SSH inside the container </p>
-
-In the VS Code dev container terminal create a new SSH key. Use the default path (~/.ssh/id_ed25519), you can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key).
+!!! Note "Linux Users"
+    If you already have a ssh key added to your github account you can skip to the end of this step.
 
 ``` bash
 ssh-keygen -t ed25519 -C "github"
+cat ~/.ssh/id_ed25519.pub
 ```
+
+Go to this link <https://github.com/settings/keys> and click **New SSH Key**. Add the title `WSL Ubuntu 24.04` and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field.
 
 Then open your ssh config file by running this command.
 
@@ -42,17 +35,19 @@ Host github.com
     IdentityFile ~/.ssh/id_ed25519
 ```
 
-Go to this link <https://github.com/settings/keys> and click **New SSH Key**. Add the title `ADVT Dev Container` and copy the ~/.ssh/id_ed25519.pub file contents (print by running the command below) to the key field.
+Then clone the repository and open VS Code.
 
 ``` bash
-cat ~/.ssh/id_ed25519.pub
+git clone git@github.com:advt-vt/advt.git && cd advt && code .
 ```
 
-Then run this command to change the remote repository from HTTPS to SSH.
+## <p style="text-align: center;"> Installing the dev container </p>
 
-``` bash
-git remote set-url origin git@github.com:advt-vt/advt.git
-```
+In VS Code open the Quick Open Dialog by pressing `Ctrl+P`/`⌘P`.
+
+Type `ext install dev containers` and install and enable the Microsoft Dev Containers extension.
+
+Build and enter the dev container by opening the Quick Open Dialog and typing `>Dev Containers: Rebuild and Reopen in Container`.
 
 ## <p style="text-align: center;"> Reopening the Container </p>
 
@@ -61,7 +56,7 @@ To stop the container open the Quick Open Dialog box and type `Remote: Close Rem
 To reopen the container first open WSL and run this command.
 
 ``` bash
-cd advt && code .
+cd advt && git pull && code .
 ```
 
 Then reopen the container by opening the Quick Open Dialog box and typing `>Dev Containers: Rebuild and Reopen in Container`.
