@@ -23,40 +23,32 @@ Build and enter the dev container by opening the Quick Open Dialog and typing `>
 
 ## <p style="text-align: center;"> Setting up git SSH inside the container </p>
 
-In the VS Code dev container terminal create a new SSH key. Use the default path (~/.ssh/id_ed25519), you can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key). 
+In the VS Code dev container terminal create a new SSH key. Use the default path (~/.ssh/id_ed25519), you can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key).
 
 ``` bash
 ssh-keygen -t ed25519 -C "github"
 ```
 
-Open your bashrc by running this command.
+Then open your ssh config file by running this command.
 
 ``` bash
-nano ~/.bashrc
+nano ~/.ssh/config
 ```
 
-And then paste this block at the end of the file.
+And then paste this block into the file.
 
 ``` bash
-#start ssh for this terminal and add all keys
-for key in ${HOME}/.ssh/*; do
-    fname=$(basename $key)
-    if [[ -f "$key" && ! "$fname" =~ .*\.pub$ && ! "$fname" =~ ^known_hosts.* && ! "$fname" =~ ^config$ && ! "$fname" =~ ^authorized_keys.* ]]; then
-        eval $(keychain -q --eval "$key" )
-    fi
-done
+Host github.com
+    IdentityFile ~/.ssh/id_ed25519
 ```
 
-Then run these commands to update.
+Go to this link <https://github.com/settings/keys> and click **New SSH Key**. Add the title `ADVT Dev Container` and copy the ~/.ssh/id_ed25519.pub file contents (print by running the command below) to the key field.
 
 ``` bash
-sudo apt update
-sudo apt install keychain -y
-source ~/.bashrc
 cat ~/.ssh/id_ed25519.pub
 ```
 
-Go to this link <https://github.com/settings/keys> and click **New SSH Key**. Add the title `ADVT Dev Container` and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field. Then run this command to change the remote repository from HTTPS to SSH.
+Then run this command to change the remote repository from HTTPS to SSH.
 
 ``` bash
 git remote set-url origin git@github.com:advt-vt/advt.git
