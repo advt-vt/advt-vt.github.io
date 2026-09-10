@@ -7,22 +7,22 @@ description: Setting up the development container.
 
 ## <p style="text-align: center;"> Cloning the Repository </p>
 
-First create a new SSH key. Use the default path (~/.ssh/id_ed25519), you can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key).
-
 !!! Note "Windows Users"
     **If you are using Windows you must do all of the following commands in WSL**
 
 !!! Note "Linux Users"
     If you already have a ssh key added to your github account you can skip to the end of this step.
 
+First create a new SSH key. You can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key).
+
 ``` bash
-ssh-keygen -t ed25519 -C "github"
+ssh-keygen -t ed25519 -f "~/.ssh/id_ed25519" -C "github"
 cat ~/.ssh/id_ed25519.pub
 ```
 
 Go to this link <https://github.com/settings/keys> and click **New SSH Key**. Add the title `WSL Ubuntu 24.04` and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field.
 
-Then open your ssh config file by running this command.
+Then create the ssh config file by running this command.
 
 ``` bash
 nano ~/.ssh/config
@@ -38,7 +38,7 @@ Host github.com
 Then clone the repository and open VS Code.
 
 ``` bash
-git clone git@github.com:advt-vt/advt.git && cd advt && code .
+cd ~ && git clone git@github.com:advt-vt/advt.git && cd advt && code .
 ```
 
 ## <p style="text-align: center;"> Installing the dev container </p>
@@ -56,7 +56,7 @@ To stop the container open the Quick Open Dialog box and type `Remote: Close Rem
 To reopen the container first open WSL and run this command.
 
 ``` bash
-cd advt && git pull && code .
+cd ~/advt && git pull && code .
 ```
 
 Then reopen the container by opening the Quick Open Dialog box and typing `>Dev Containers: Rebuild and Reopen in Container`.
