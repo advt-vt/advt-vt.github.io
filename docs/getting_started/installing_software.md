@@ -11,12 +11,23 @@ description: Installing the required software.
 
 ### Installing [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 
-Open command prompt **as an administrator** and run the following commands.
+Open command prompt **as an administrator** and run the following command to install Ubuntu 24.04.
 
-``` sh
+``` bash
 wsl.exe --install -d Ubuntu-24.04
+```
+
+Then set it as the default distribution for WSL.
+
+``` bash
 wsl --set-default Ubuntu-24.04
 ```
+
+!!! Note "If you have multiple WSL instances"
+    You don't have to set Ubuntu-24.04 as the default, instead you can open it whenever you are connecting to the dev conatiner
+    ``` bash
+    wsl -d Ubuntu-24.04
+    ```
 
 Enter your user info to complete the installation.
 
