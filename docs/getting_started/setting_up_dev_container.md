@@ -16,7 +16,7 @@ description: Setting up the development container.
 First create a new SSH key. You can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key).
 
 ``` bash
-ssh-keygen -t ed25519 -f "~/.ssh/id_ed25519" -C "github"
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -C "github"
 cat ~/.ssh/id_ed25519.pub
 ```
 
