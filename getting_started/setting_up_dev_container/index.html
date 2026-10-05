@@ -619,7 +619,7 @@
 <p>If you already have a ssh key added to your github account you can skip to the end of this step.</p>
 </div>
 <p>First create a new SSH key. You can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key).</p>
-<div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-f<span class="w"> </span><span class="s2">"~/.ssh/id_ed25519"</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">"github"</span>
+<div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">"github"</span>
 cat<span class="w"> </span>~/.ssh/id_ed25519.pub
 </code></pre></div>
 <p>Go to this link <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> and click <strong>New SSH Key</strong>. Add the title <code>WSL Ubuntu 24.04</code> and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field.</p>
