@@ -20,7 +20,7 @@ ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -C "github"
 cat ~/.ssh/id_ed25519.pub
 ```
 
-Go to this link <https://github.com/settings/keys> and click **New SSH Key**. Add the title `WSL Ubuntu 24.04` and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field.
+Go to this link <https://github.com/settings/keys> and click **New SSH Key**. Add the title `WSL Ubuntu 24.04` and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field. It should look like `ssh-ed25519 AAAA...`.
 
 Then create the ssh config file by running this command.
 
