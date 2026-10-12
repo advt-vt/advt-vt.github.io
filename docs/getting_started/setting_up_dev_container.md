@@ -35,7 +35,7 @@ Host github.com
     IdentityFile ~/.ssh/id_ed25519
 ```
 
-Then clone the repository and open VS Code.
+Save and close the file by pressing `Ctrl+x`, then `y`, then `Enter`. Then clone the repository and open VS Code by running the following command.
 
 ``` bash
 cd ~ && git clone git@github.com:advt-vt/advt.git && cd advt && code .
