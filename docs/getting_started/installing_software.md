@@ -6,7 +6,7 @@ description: Installing the required software.
 # <p style="text-align: center"> Installing Software </p>
 
 !!! Note "IMPORTANT"
-    **Please read ALL of the text provided and complete each step in order.**
+    **Please read ALL of the text/instructions and complete each step in order.**
 
 ---
 
