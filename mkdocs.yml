@@ -50,5 +50,5 @@ nav:
         - Installing Software: getting_started/installing_software.md
         - Setting Up the Development Container: getting_started/setting_up_dev_container.md
         - Writting Documentation: getting_started/writting_documentation.md
-        
-    - Workflow: diagrams/systems_diagram.md
+
+    - Workflow: workflow.md

@@ -5,7 +5,7 @@ description: A diagram and explanation of all of the software we're using and ho
 
 # <p style="text-align: center"> Systems Diagram </p>
 ---
-![A simple diagram that explains our software stack.](./System_Diagram.drawio.svg)
+![A simple diagram that explains our software stack.](./diagrams/System_Diagram.drawio.svg)
 
 ### NVIDIA Jetson
 The NVIDIA Jetson chip runs all of the decision making calculations that are needed for the drone. The machine learning model we use will run on this chip. So if the cameras spot a bird, the Jetson chip will identify it as a bird and issue a command via MAVSDK to move out of the way.
