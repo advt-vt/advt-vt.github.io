@@ -5,6 +5,9 @@ description: Installing the required software.
 
 # <p style="text-align: center"> Installing Software </p>
 
+!!! Note "IMPORTANT"
+    **Please read ALL of the text provided and complete each step in order.**
+
 ---
 
 ## <p style="text-align: center"> Windows </p>
@@ -54,7 +57,8 @@ Go to this link <https://code.visualstudio.com/Download> and download and instal
 
 ## <p style="text-align: center"> Linux </p>
 
-The commands provided here are for Ubuntu. If you are using a different distribution (including Debian!!) follow the official instructions for each part linked in the header.
+!!! Note "IMPORTANT"
+    The commands provided here are for Ubuntu. **If you are using a different distribution** (including Debian!!) follow the official instructions for each part linked in the header.
 
 ### Installing [Git](https://git-scm.com/install/linux)
 
