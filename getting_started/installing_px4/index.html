@@ -533,8 +533,8 @@
 <p class="admonition-title">Windows Users</p>
 <p><strong>If you are using Windows you must do all of the following commands in WSL</strong></p>
 </div>
-<p>First OUTSIDE of the dev container add <code>ADVT_PX4_INSTALL=true</code> into your .bashrc.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"export ADVT_PX4_INSTALL=true"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<p>First OUTSIDE of the dev container add <code>ADVT_PX4_INSTALL=true</code> into your bash profile.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"export ADVT_PX4_INSTALL=true"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.profile
 </code></pre></div>
 <p>Then pull the PX4 main repository and all of its sub repos.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/advt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PX4/PX4-Autopilot.git<span class="w"> </span>--recursive
