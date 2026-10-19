@@ -8,10 +8,10 @@ description: Installing PX4 if needed
 !!! Note "Windows Users"
     **If you are using Windows you must do all of the following commands in WSL**
 
-First OUTSIDE of the dev container add `ADVT_PX4_INSTALL=true` into your .bashrc.
+First OUTSIDE of the dev container add `ADVT_PX4_INSTALL=true` into your bash profile.
 
 ``` bash
-echo "export ADVT_PX4_INSTALL=true" >> ~/.bashrc
+echo "export ADVT_PX4_INSTALL=true" >> ~/.profile
 ```
 
 Then pull the PX4 main repository and all of its sub repos.
