@@ -20,4 +20,4 @@ Then pull the PX4 main repository and all of its sub repos.
 cd ~/advt && git clone https://github.com/PX4/PX4-Autopilot.git --recursive
 ```
 
-Then open and rebuild the container and PX4 should be setup.
+Then close VS Code and reopen and rebuild the container and PX4 should be setup.
