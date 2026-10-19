@@ -50,6 +50,7 @@ nav:
     - Getting Started:
         - Installing Software: getting_started/installing_software.md
         - Setting Up the Development Container: getting_started/setting_up_dev_container.md
-        - Writing Documentation: getting_started/writing_documentation.md
+        - Writing Documentation (OPTIONAL): getting_started/writing_documentation.md
+        - Installing PX4 (OPTIONAL): getting_started/installing_px4.md
 
     - Workflow: workflow.md
