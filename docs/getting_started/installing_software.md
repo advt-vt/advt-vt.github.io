@@ -20,7 +20,13 @@ Open command prompt **as an administrator** and run the following command to ins
 wsl.exe --install -d Ubuntu-24.04
 ```
 
-Then set it as the default distribution for WSL.
+Enter your user info to complete the installation. Then exit out of WSL.
+
+``` bash
+exit
+```
+
+Then set the newly installed instance as the default distribution for WSL (Run this in administrator command prompt).
 
 ``` bash
 wsl --set-default Ubuntu-24.04
@@ -32,7 +38,11 @@ wsl --set-default Ubuntu-24.04
     wsl -d Ubuntu-24.04
     ```
 
-Enter your user info to complete the installation.
+Launch WSL again.
+
+``` bash
+wsl
+```
 
 ### Installing [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
 
