@@ -784,7 +784,10 @@
 <p>Open command prompt <strong>as an administrator</strong> and run the following command to install Ubuntu 24.04.</p>
 <div class="highlight"><pre><span></span><code>wsl.exe<span class="w"> </span>--install<span class="w"> </span>-d<span class="w"> </span>Ubuntu-24.04
 </code></pre></div>
-<p>Then set it as the default distribution for WSL.</p>
+<p>Enter your user info to complete the installation. Then exit out of WSL.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">exit</span>
+</code></pre></div>
+<p>Then set the newly installed instance as the default distribution for WSL (Run this in administrator command prompt).</p>
 <div class="highlight"><pre><span></span><code>wsl<span class="w"> </span>--set-default<span class="w"> </span>Ubuntu-24.04
 </code></pre></div>
 <div class="admonition note">
@@ -793,7 +796,9 @@
 <div class="highlight"><pre><span></span><code>wsl<span class="w"> </span>-d<span class="w"> </span>Ubuntu-24.04
 </code></pre></div></p>
 </div>
-<p>Enter your user info to complete the installation.</p>
+<p>Launch WSL again.</p>
+<div class="highlight"><pre><span></span><code>wsl
+</code></pre></div>
 <h3 id="installing-docker-desktop">Installing <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Docker Desktop</a></h3>
 <p>Go to this link <a href="https://docs.docker.com/desktop/setup/install/windows-install/">https://docs.docker.com/desktop/setup/install/windows-install/</a> and download and install Docker Desktop for Windows.</p>
 <p>Then open Ubuntu in WSL and add yourself to the docker user group.</p>
