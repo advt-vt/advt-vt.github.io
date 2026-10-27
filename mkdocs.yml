@@ -1,15 +1,15 @@
 site_name: ADVT Documentation
 site_description: Documentation for Autonomous Drone at Virginia Tech.
 site_url: https://advt-vt.github.io/
-repo_url: https://github.com/advt-vt
-repo_name: Github Organization
+repo_name: advt-vt/advt
+repo_url: https://github.com/advt-vt/advt
 
 theme:
     name: material
     logo: assets/logo.png
     favicon: assets/logo.png
     icon:
-        repo: fontawesome/brands/github
+        repo: fontawesome/brands/git-alt
     palette:
         - scheme: slate
           toggle:
@@ -43,6 +43,15 @@ markdown_extensions:
     - pymdownx.mark
     - pymdownx.tilde
     - admonition
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/advt-vt
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/advtowner
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/official_advt/
 
 nav:
     - Home: index.md
