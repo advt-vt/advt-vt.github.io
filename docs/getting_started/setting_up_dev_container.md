@@ -10,8 +10,8 @@ description: Setting up the development container.
 !!! Note "Windows Users"
     **If you are using Windows you must do all of the following commands in WSL**
 
-!!! Note "Linux Users"
-    If you already have a ssh key added to your github account you can skip to the end of this step.
+!!! Note "Linux / macOS Users"
+    If you already have a ssh key added to your github account you can skip to cloning the repository at the end of this step.
 
 First create a new SSH key. You can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key).
 
@@ -21,6 +21,9 @@ cat ~/.ssh/id_ed25519.pub
 ```
 
 Go to this link <https://github.com/settings/keys> and click **New SSH Key**. Add the title `WSL Ubuntu 24.04` and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field. It should look like `ssh-ed25519 AAAA...`.
+
+!!! Note "SSH Key title"
+    If you are on Linux or macOS you can name it whatever like `Laptop` or `macOS computer` it doesn't really matter.
 
 Then create the ssh config file by running this command.
 
@@ -40,6 +43,9 @@ Save and close the file by pressing `Ctrl+x`, then `y`, then `Enter`. Then clone
 ``` bash
 cd ~ && git clone git@github.com:advt-vt/advt.git && cd advt && code .
 ```
+
+!!! Note "Linux / macOS"
+    You don't have to clone the repository into the home directory, but if you choose to clone it elsewhere make sure you can access it easily.
 
 ## <p style="text-align: center;"> Installing the dev container </p>
 

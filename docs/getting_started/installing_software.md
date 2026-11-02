@@ -133,3 +133,39 @@ Go to this link <https://code.visualstudio.com/Download> and download the latest
 ```bash
 sudo apt install ~/Downloads/code_*.deb
 ```
+
+<br>
+
+## <p style="text-align: center"> Mac-OS </p>
+
+### Installing [Git](https://git-scm.com/install/mac)
+
+First install Homebrew, the unofficial official package manager for macOS. Open a terminal and run this to install it.
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Then install git using brew.
+
+```bash
+brew install git
+```
+
+### Installing Docker Engine
+
+Install docker using brew.
+
+```bash
+brew install --cask docker
+```
+
+Verify that it was installed by running this command.
+
+```bash
+docker version
+```
+
+### Installing [VS Code](https://code.visualstudio.com/Download)
+
+Go to this link <https://code.visualstudio.com/Download> to download and install the latest build of VS Code for macOS.
