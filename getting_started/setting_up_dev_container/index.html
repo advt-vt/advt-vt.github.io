@@ -668,14 +668,18 @@
 <p><strong>If you are using Windows you must do all of the following commands in WSL</strong></p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Linux Users</p>
-<p>If you already have a ssh key added to your github account you can skip to the end of this step.</p>
+<p class="admonition-title">Linux / macOS Users</p>
+<p>If you already have a ssh key added to your github account you can skip to cloning the repository at the end of this step.</p>
 </div>
 <p>First create a new SSH key. You can set a passphrase if you want (if you do make it short as you will need to enter it every time you use the key).</p>
 <div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">"github"</span>
 cat<span class="w"> </span>~/.ssh/id_ed25519.pub
 </code></pre></div>
 <p>Go to this link <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> and click <strong>New SSH Key</strong>. Add the title <code>WSL Ubuntu 24.04</code> and copy the ~/.ssh/id_ed25519.pub file contents (printed above) to the key field. It should look like <code>ssh-ed25519 AAAA...</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">SSH Key title</p>
+<p>If you are on Linux or macOS you can name it whatever like <code>Laptop</code> or <code>macOS computer</code> it doesn't really matter.</p>
+</div>
 <p>Then create the ssh config file by running this command.</p>
 <div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/.ssh/config
 </code></pre></div>
@@ -686,6 +690,10 @@ cat<span class="w"> </span>~/.ssh/id_ed25519.pub
 <p>Save and close the file by pressing <code>Ctrl+x</code>, then <code>y</code>, then <code>Enter</code>. Then clone the repository and open VS Code by running the following command.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:advt-vt/advt.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>advt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>code<span class="w"> </span>.
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Linux / macOS</p>
+<p>You don't have to clone the repository into the home directory, but if you choose to clone it elsewhere make sure you can access it easily.</p>
+</div>
 <h2 id="installing-the-dev-container"><p style="text-align: center;"> Installing the dev container </p></h2>
 <p>In VS Code open the Quick Open Dialog by pressing <code>Ctrl+P</code>/<code>⌘P</code>.</p>
 <p>Type <code>ext install dev containers</code> and install and enable the Microsoft Dev Containers extension.</p>

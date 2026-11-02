@@ -500,6 +500,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mac-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mac-OS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mac-OS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing Git
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-docker-engine_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing Docker Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-vs-code_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing VS Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -753,6 +803,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mac-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mac-OS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mac-OS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing Git
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-docker-engine_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing Docker Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-vs-code_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing VS Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -864,6 +964,24 @@ systemctl<span class="w"> </span>reboot
 <p>Go to this link <a href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a> and download the latest build of VS Code for your distribution and architecture. Then run this command to install it.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>~/Downloads/code_*.deb
 </code></pre></div>
+<p><br></p>
+<h2 id="mac-os"><p style="text-align: center"> Mac-OS </p></h2>
+<h3 id="installing-git_1">Installing <a href="https://git-scm.com/install/mac">Git</a></h3>
+<p>First install Homebrew, the unofficial official package manager for macOS. Open a terminal and run this to install it.</p>
+<div class="highlight"><pre><span></span><code>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">"</span>
+</code></pre></div>
+<p>Then install git using brew.</p>
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>git
+</code></pre></div>
+<h3 id="installing-docker-engine_1">Installing Docker Engine</h3>
+<p>Install docker using brew.</p>
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>docker
+</code></pre></div>
+<p>Verify that it was installed by running this command.</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>version
+</code></pre></div>
+<h3 id="installing-vs-code_2">Installing <a href="https://code.visualstudio.com/Download">VS Code</a></h3>
+<p>Go to this link <a href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a> to download and install the latest build of VS Code for macOS.</p>
 
 
 
