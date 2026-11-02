@@ -166,6 +166,16 @@ Verify that it was installed by running this command.
 docker version
 ```
 
+### Installing xQuartz
+
+Install xQuartz using brew.
+
+```bash
+brew install --cask xquartz
+```
+
+Then launch XQuartz, under the XQuartz menu, select Settings. Go to the Security tab and ensure `Allow connections from network clients` is checked. Restart XQuartz.
+
 ### Installing [VS Code](https://code.visualstudio.com/Download)
 
 Go to this link <https://code.visualstudio.com/Download> to download and install the latest build of VS Code for macOS.
