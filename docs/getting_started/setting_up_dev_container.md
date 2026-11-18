@@ -67,6 +67,15 @@ cd ~/advt && git pull && code .
 
 Then reopen the container by opening the Quick Open Dialog box and typing `>Dev Containers: Rebuild and Reopen in Container`.
 
+To open the container with **GPU forwarding OR if you are on MacOS** run this command instead.
+``` bash
+cd ~advt && git pull && ./launch.sh
+```
+VS code should open on it's own (it might take a while if you are rebuilding the container). Once it opens press "Open a Remote window" in the very bottom left. A dialogue box should pop up and you should type `Attach to Running Container...` and select the ADVT container. VS Code will open a new window that should be running in the container.
+
+As of right now GPU forwarding works on NVIDIA GPUs on Windows and Linux. AMD and Intel GPUs are only supported on Linux, they do not work on Windows enviroments.
+
+
 ## <p style="text-align: center;"> [Known Limitations](https://code.visualstudio.com/docs/devcontainers/containers#_known-limitations) of Dev Containers </p>
 
 * The unofficial Ubuntu Docker snap package for Linux is not supported.
