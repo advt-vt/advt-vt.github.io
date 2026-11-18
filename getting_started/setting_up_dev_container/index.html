@@ -659,8 +659,8 @@ cat<span class="w"> </span>~/.ssh/id_ed25519.pub
 <div class="highlight"><pre><span></span><code>Host<span class="w"> </span>github.com
 <span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/id_ed25519
 </code></pre></div>
-<p>Save and close the file by pressing <code>Ctrl+x</code>, then <code>y</code>, then <code>Enter</code>. Then clone our main repository, the PX4 repository, and open VS Code by running the following command. This will take a while as the PX4 repository is quite large.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:advt-vt/advt.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>advt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PX4/PX4-Autopilot.git<span class="w"> </span>--recursive<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>code<span class="w"> </span>.
+<p>Save and close the file by pressing <code>Ctrl+x</code>, then <code>y</code>, then <code>Enter</code>. Then clone our main repository and open VS Code by running the following command. This will take a while as the submodules are quite large.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:advt-vt/advt.git<span class="w"> </span>--recursive<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>advt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>code<span class="w"> </span>.
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Linux / macOS</p>
