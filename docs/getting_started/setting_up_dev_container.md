@@ -38,10 +38,10 @@ Host github.com
     IdentityFile ~/.ssh/id_ed25519
 ```
 
-Save and close the file by pressing `Ctrl+x`, then `y`, then `Enter`. Then clone our main repository, the PX4 repository, and open VS Code by running the following command. This will take a while as the PX4 repository is quite large.
+Save and close the file by pressing `Ctrl+x`, then `y`, then `Enter`. Then clone our main repository and open VS Code by running the following command. This will take a while as the submodules are quite large.
 
 ``` bash
-cd ~ && git clone git@github.com:advt-vt/advt.git && cd advt && git clone https://github.com/PX4/PX4-Autopilot.git --recursive && code .
+cd ~ && git clone git@github.com:advt-vt/advt.git --recursive && cd advt && code .
 ```
 
 !!! Note "Linux / macOS"
